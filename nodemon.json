@@ -1,0 +1,5 @@
+{
+        "ignore":["*.md", "bundled_app.js"]
+
+}
+
