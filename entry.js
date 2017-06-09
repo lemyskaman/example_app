@@ -5,6 +5,7 @@ window._ = require('underscore');
 
 
 var Backbone = require('backbone');
+window.Backbone=Backbone;
 Backbone.$ = window.$
 var radio =require('backbone.radio');
 
@@ -33,7 +34,7 @@ var kamanApp = require('kaman-app')
 var app = new kamanApp({
     name:'example App',
     langSource:require('./lang'),
-    modules: {}//require('./modules.js')
+    modules: {}//require( './modules.js')
 });
 
 window.app=app;
