@@ -34,7 +34,7 @@ var kamanApp = require('kaman-app');
 var app = new kamanApp({
   name: 'example App',
   langSource: require('./lang'),
-  modules: {} //require( './modules.js')
+  modules: [require('./modules/example'),{}] //require( './modules.js')
 });
 
 window.app = app;
