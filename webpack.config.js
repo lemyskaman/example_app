@@ -16,6 +16,7 @@ module.exports = {
         alias: {
             '_': 'underscore',
             'Backbone': 'backbone',
+            
             'Marionette': 'backbone.marionette'
             //'radio': 'backbone.radio',
             //'KCFG': path.resolve(__dirname, 'kamanapp/config'),

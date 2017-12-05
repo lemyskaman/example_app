@@ -2,10 +2,10 @@
 
 module.exports={
     es:{
-        'module:name':'Ejemplo'
+        'module:name':'Modulo Ejemplo'
      
     },
     en:{
-         'module:name':'Examples'
+         'module:name':'Example Module'
     }
 }
