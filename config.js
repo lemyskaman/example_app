@@ -1,9 +1,9 @@
 module.exports = {
     defaultLang:'en',
-    name: 'Example-app',
+    name: 'Working-example-app',
     debug: true,
-    baseUrl:'http://localhost:8080/public/',
+    baseUrl:'http://localhost:9000/public/',
     resourcesUrl: 'http://localhost:4000/resources',
-    nodeSelector:'#root'
+    nodeSelector:'#root'//the hole app container
 
 }

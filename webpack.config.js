@@ -4,19 +4,23 @@ var path = require('path');
 
 module.exports = {
     entry: "./entry.js",
+
+
     output: {
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'public'),
         publicPath: '/public',
         filename: "bundled_kamanapp.js"
     },
 
+    devServer:{
+        port:'9000'
+    },
     resolve: {
         extensions: ['.js'],
         modules: ['node_modules', 'kaman'],
         alias: {
             '_': 'underscore',
             'Backbone': 'backbone',
-            
             'Marionette': 'backbone.marionette'
             //'radio': 'backbone.radio',
             //'KCFG': path.resolve(__dirname, 'kamanapp/config'),
@@ -29,17 +33,12 @@ module.exports = {
             '_': '_',
             'Backbone': 'Backbone',
             'Marionette': 'Marionette'
-            //'radio': 'radio',
-            //'KCFG': 'KCFG',
-            //'KLIBS': 'KLIBS',
-            //'KCORE': 'KCORE'
+
         })
     ],
     //devtool:'cheap-eval-source-map',
     devtool: 'inline-source-map',
-    /*watchOptions: {
-        poll: true
-    },*/
+
     module: {
 
         rules: [
