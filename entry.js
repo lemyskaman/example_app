@@ -6,10 +6,15 @@ var Backbone = require('backbone');
 window.Backbone = Backbone;
 Backbone.$ = window.$;
 var radio = require('backbone.radio');
-var kamanCore = require('kaman-core');
+var KamanCore = require('kaman-core');
 var configData = require('./config');
-var config = new kamanCore.Config(configData);
+var config = new KamanCore.Config(configData);
 radio.channel('kaman:app').reply('config', config);
+        
+
+if (window.__agent) {
+  window.__agent.start(Backbone, Marionette);
+}
 
 /*
 var core = require('./kaman/core')
@@ -27,7 +32,11 @@ console.log(ui)*/
 var KamanApp = require('kaman-app');
 var KamanUi = require('kaman-ui');
 var langSource = require('./lang');
-
+window.kaman={
+  app:KamanApp,
+  core:KamanCore,
+  ui:KamanUi
+}
 /* every time you create a new application
 *you need to pass at least a region dom selector, a MainLayoutView Constructor
 *and a modules object with all modules view data
@@ -41,10 +50,12 @@ var app = new KamanApp({
   Ui: KamanUi.Object.extend({
     name: 'KamanApp UI',
     langSource: langSource
-  })
+  }),
+  config:config
 })
 
 window.app = app;
+
 
 
 //so lets jquery check dom load

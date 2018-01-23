@@ -2,10 +2,12 @@
 
 module.exports={
     es:{
-        'example:module:name':'Modulo Ejemplo'
+        'module:example:name':'Modulo Ejemplo',
+        'module:example:main:menu':"Menu Principal"
      
     },
     en:{
-         'example:module:name':'Example Module'
+         'module:example:name':'Example Module',
+         'module:example:main:menu':"Main Menu"
     }
 }
